@@ -18,7 +18,7 @@ I took the pictures head on, and once I'd run out of coffee I aligned and croppe
 
 ![](figures/16.05g.jpg)
 
-I read in the files in Python using [scikit-image](), and extracted the red channels from the images.
+I read in the files in Python using [scikit-image](http://scikit-image.org/), and extracted the red channels from the images.
 
 ![](figures/red_channel_images.png)
 
@@ -26,7 +26,7 @@ To quantify the dependence on weight, we need to summarize the images somehow. F
 
 ![](figures/mean-pixel-measurements.png)
 
-It seems the minimum of these values could be a good representation of the color intensity. To make sure we're not capturing some outlier pixel value for one of the weights, I smooth the data by fitting a 2nd degree polynomial to the intensity values over the pixels using [statsmodels]().
+It seems the minimum of these values could be a good representation of the color intensity. To make sure we're not capturing some outlier pixel value for one of the weights, I smooth the data by fitting a 2nd degree polynomial to the intensity values over the pixels using [statsmodels](http://statsmodels.sourceforge.net/).
 
 ![](figures/mean-pixel-model-predictions.png)
 
@@ -36,7 +36,7 @@ Now we summarize the curves by taking the minimum. Finally, we try to predict th
 
 With an R-squared of 0.923, we see that the weight is well predicted by the color.
 
-The analysis is available in a Jupyter notebook [here]().
+The analysis is available in a Jupyter notebook [here](https://github.com/vals/coffee-colors).
 
 Regarding the flavour, I think I ended up liking a weight of ~20g the best, for this lighter coffee.
 
